@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Ticket } from "lucide-react";
+export const Route = createFileRoute("/tickets")({ head: () => ({ meta: [{ title: "Mes billets — Fodium" },{ name: "description", content: "Retrouvez vos billets et pass Fodium." },{ property: "og:title", content: "Mes billets — Fodium" },{ property: "og:description", content: "Vos accès Fodium en un seul endroit." },{ property: "og:type", content: "website" },{ name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page(){return <main className="grid min-h-screen place-items-center px-5 pb-28"><div className="text-center"><Ticket className="mx-auto size-12 text-electric"/><h1 className="mt-5 font-display text-4xl font-bold">Mes billets</h1><p className="mt-3 text-muted-foreground">Vos prochains pass apparaîtront ici.</p></div></main>}

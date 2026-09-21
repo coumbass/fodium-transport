@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { UserRound } from "lucide-react";
+export const Route = createFileRoute("/profile")({ head: () => ({ meta: [{ title: "Profil — Fodium" },{ name: "description", content: "Gérez votre profil spectateur Fodium." },{ property: "og:title", content: "Profil — Fodium" },{ property: "og:description", content: "Votre espace spectateur Fodium." },{ property: "og:type", content: "website" },{ name: "twitter:card", content: "summary_large_image" }] }), component: Page });
+function Page(){return <main className="grid min-h-screen place-items-center px-5 pb-28"><div className="text-center"><UserRound className="mx-auto size-12 text-electric"/><h1 className="mt-5 font-display text-4xl font-bold">Profil</h1><p className="mt-3 text-muted-foreground">Le prototype ne nécessite pas de connexion.</p></div></main>}
