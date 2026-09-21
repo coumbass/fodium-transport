@@ -29,7 +29,7 @@ Les animations restent directionnelles et brèves. Le badge Transport pulse pour
 Prérequis : Node.js 20+ et bun.
 
 ```sh
-git clone https://github.com/<votre-compte>/fodium-transport.git
+git clone https://github.com/coumbass/fodium-transport.git
 cd fodium-transport
 bun install        # ou : npm install
 bun run dev        # ou : npm run dev
