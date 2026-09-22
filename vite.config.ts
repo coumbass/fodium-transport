@@ -5,5 +5,18 @@ import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [tsConfigPaths(), tanstackStart(), viteReact(), tailwindcss()],
+  base: "/fodium-transport/",
+
+  plugins: [
+    tsConfigPaths(),
+
+    tanstackStart({
+      spa: {
+        enabled: true,
+      },
+    }),
+
+    viteReact(),
+    tailwindcss(),
+  ],
 });
