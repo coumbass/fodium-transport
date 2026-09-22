@@ -35,6 +35,15 @@ jobs:
       - name: Build application
         run: npm run build
 
+      # TanStack Start SPA mode generates _shell.html.
+      # GitHub Pages needs index.html at the site root and 404.html
+      # for client-side routes because it does not support custom rewrites.
+      - name: Prepare GitHub Pages SPA files
+        run: |
+          test -f dist/_shell.html
+          cp dist/_shell.html dist/index.html
+          cp dist/_shell.html dist/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
